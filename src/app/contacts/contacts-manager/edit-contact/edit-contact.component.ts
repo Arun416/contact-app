@@ -10,6 +10,8 @@ import { ContactsService } from '../../services/contacts.service';
 })
 export class EditContactComponent implements OnInit {
   editContactForm!:FormGroup;
+  contactId:any;
+
   constructor(private route:ActivatedRoute,
               private contactServices:ContactsService,
               private fb:FormBuilder) { }
@@ -23,11 +25,11 @@ export class EditContactComponent implements OnInit {
       address:''
     })
   }
-  contactId:any;
+
+
   getEditContactData(){
       this.contactId = this.route.snapshot.params['id'];
       this.contactServices.ViewContact(this.contactId).subscribe(response=>{
-        console.log(response);
         this.editContactForm.setValue({
           name: response.name,
           mobile:response.mobile,
@@ -39,10 +41,8 @@ export class EditContactComponent implements OnInit {
 
 
   SaveEditContact(editedData:any){
-    console.log(editedData);
     this.contactServices.updateContact(this.contactId,editedData).subscribe({
       next:editedData=>{
-        console.log(editedData,"Wow");
         alert("Contact Updated ")
       }
     })
