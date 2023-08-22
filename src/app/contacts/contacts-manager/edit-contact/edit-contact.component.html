@@ -1,0 +1,27 @@
+<div class="container justify-content-center">
+    <div class="row">
+        <form [formGroup]="editContactForm" (ngSubmit)="SaveEditContact(editContactForm.value)">
+        <div class="col-md-12 mb-3 mt-3 pt-3">
+            <h1>Edit Existing Contact</h1>
+        </div>
+        <div class="col-md-12 mb-3">
+            <input type="text" placeholder="Enter Name" class="form-control" formControlName="name"/>
+        </div>
+        <div class="col-md-12 mb-3">
+            <input type="text" placeholder="Enter Mobile" class="form-control" formControlName="mobile"/>
+        </div>
+        <div class="col-md-12 mb-3">
+            <input type="text" placeholder="Enter Email" class="form-control" formControlName="email"/>
+        </div>
+        <div class="col-md-12 mb-3">
+            <textarea  row="3" placeholder="Enter Address" class="form-control" formControlName="address"></textarea>
+        </div>
+        <div class="col-md-12 mb-3">
+            <button class="btn btn-secondary" style="font-size: 15px;">
+                <span class="material-icons-outlined" style="vertical-align: middle;font-size: 15px">
+                    mode_edit
+                </span>
+               <span class="p-2" style="display:inline;vertical-align: middle;">Edit Contact</span> </button>
+        </div></form>
+    </div>
+</div>

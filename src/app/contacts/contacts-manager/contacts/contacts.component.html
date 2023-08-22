@@ -1,0 +1,64 @@
+<div class="container justify-content-center align-items-center">
+  
+  <div class="row  mt-2 pt-2">
+    <h2>My-Contacts-List</h2>
+
+    <div class="col-md-8 mt-4">
+       <input name="search" autofocus class="form-control"  placeholder="Filter.."  [(ngModel)]="searchText"/>
+    </div>
+    <div class="col-md-4 mt-4"  >
+        <button class="btn btn-success" (click)="addNewContact()">
+          <span class="material-icons-outlined"  style="display: inline;vertical-align: middle;">
+            add
+          </span></button>
+     </div>
+
+     <!--Spinner-->
+
+     <div *ngIf="loading" class="justify-content-center" style="left:40%;top:50%;position:absolute">
+      <app-loader></app-loader>
+    </div>
+    <div class="col-md-12 mt-4 pt-4 mb-4"  *ngIf="!loading && getAllContacts.length >= 0">
+      <h4 style="font-family:cursive ;">Contacts ({{getAllContacts.length}}) </h4>
+      <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+        <button class="btn btn-danger" type="button" (click)="deleteContact()"><span class="material-icons-outlined" style="vertical-align: middle;">delete</span><span class="p-2" style="vertical-align: middle;">Delete Contact</span></button>
+      </div>
+      <div class="form-check mt-1 mb-3 col-md-12" style="left:3%;position: relative;">
+        <!--Select all-->
+       <!--  <input class="form-check-input" type="checkbox"  
+          (change)="selectAllContact($event)"  [checked]="isAllChecked()">
+        <label class="form-check-label" for="flexCheckDefault">
+        <span class="p-2 fs-6 fw-2" style="font-weight: bold;">Select all Contact</span> 
+        </label> -->
+      </div>
+
+      <hr/>
+    <!--List contacts-->
+    <div class="list-group" *ngFor="let contact of getAllContacts| filter : searchText">
+      <label class="list-group-item" >
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><span class="p-0">
+          <span class="p-3">
+            <input class="form-check-input me-1" type="checkbox" value="{{contact.id}}" 
+            [(ngModel)]="contact.state" (change)="selectedContact($event,contact.id)"
+            style="display:inline-block;vertical-align: middle;">
+          </span>
+          <span *ngIf="contact.photo" style="vertical-align: middle;">
+            <img [src]="contact.photo" data-bs-toggle="tooltip"  data-bs-placement="right" [title]="contact.name" class="contactphoto" width="50px" height="50px" style="border-radius: 50%"  (click)="viewContact(contact.id)"  class="p-2">
+          </span>
+          <span *ngIf="!contact.photo" style="vertical-align: middle;">
+            <img src="assets/images/avator.png" data-bs-toggle="tooltip"  data-bs-placement="right" [title]="contact.name"  class="contactphoto" width="50px" height="50px" class="p-2">
+          </span>
+          </span><span class="p-2" data-bs-toggle="tooltip"  data-bs-placement="right" [title]="contact.name" (click)="viewContact(contact.id)" >{{contact.name}}</span></h5>
+        </div>
+      </label>
+    </div>
+   
+
+
+    </div>
+
+   
+    
+</div>
+</div>

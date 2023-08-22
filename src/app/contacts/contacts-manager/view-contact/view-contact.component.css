@@ -1,0 +1,12 @@
+.contact-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    vertical-align: top;
+    left:50%
+}
+
+.card-mobile {
+    display: inline;
+    vertical-align:middle;
+}

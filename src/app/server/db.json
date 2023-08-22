@@ -1,0 +1,71 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Arun.k",
+      "email": "arun@gmail.com",
+      "mobile": 9893736783,
+      "photo": "assets/images/avator.png",
+      "address": "22/4,OMR new,chennai"
+    },
+    {
+      "id": 2,
+      "name": "Ramesh.S",
+      "email": "ramesh@gmail.com",
+      "mobile": "8398894959",
+      "photo": "https://i.pravatar.cc/50",
+      "address": "10,South street,ariyalur,chennai"
+    },
+    {
+      "id": 3,
+      "name": "Ajith.B",
+      "email": "ajithm232@gmail.com",
+      "mobile": "7383697388",
+      "photo": "https://i.pravatar.cc/50?img=3",
+      "address": "4,OMR new,chennai"
+    },
+    {
+      "id": 4,
+      "name": "Saravanan.A",
+      "email": "saravanan121@gmail.com",
+      "mobile": "9842306706",
+      "photo": "https://i.pravatar.cc/50?img=1",
+      "address": "pollachi-road,coimbutore-619889"
+    },
+    {
+      "name": "Priya",
+      "mobile": "9253283993",
+      "email": "priyamk132@gmail.com",
+      "address": "101,New Street,\nThiruvarur-610001",
+      "id": 5
+    },
+    {
+      "name": "Vanathi",
+      "mobile": "9080706020",
+      "email": "vanathiperanbu123@gmail.com",
+      "address": "22/20,AvM studio,Chennai",
+      "id": 6
+    },
+    {
+      "name": "Amutha.C",
+      "mobile": "9988765424",
+      "email": "amuthaannalakshmi@zeetamil.com",
+      "address": "40/2,kaanadakathan,\nKarakudi.",
+      "id": 7
+    },
+    {
+      "name": "Tharani",
+      "mobile": "9597660646",
+      "email": "tharani1234@gmail.com",
+      "address": "TVR",
+      "id": 8
+    },
+    {
+      "name": "Karthik",
+      "mobile": "8998989979",
+      "email": "karthi5664@gmail.com",
+      "address": "Chennai",
+      "id": 9
+    }
+  ]
+}
